@@ -1,0 +1,48 @@
+
+Style/Blocks:
+  Description: >-
+                Avoid using {...} for multi-line blocks (multiline chaining is
+                always ugly).
+                Prefer {...} over do...end for single-line blocks.
+  Enabled: false
+
+Style/AccessorMethodName:
+  Description: Check the naming of accessor methods for get_/set_.
+  Enabled: false
+
+Style/Next:
+  Description: 'Use `next` to skip iteration instead of a condition at the end.'
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'spec/**/*'
+    - 'files/**/*'
+    - 'manifests/**/*'
+    - 'coverage/**/*'
+    - 'templates/**/*'
+    - 'test/**/*'
+    - 'Rakefile'
+    - 'Gemfile'
+    - '*.markdown'
+    - '*.md'
+    - 'pkg/**/*'
+
+LineLength:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Description: 'Checks for unused method arguments.'
+  Enabled: false
+
+# avoid parameter lists longer than 8 parameters.
+ParameterLists:
+  Max: 8
+  CountKeywordArgs: true
+  Enabled: true
+
+EndOfLine:
+  Enabled: false

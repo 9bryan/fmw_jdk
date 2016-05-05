@@ -1,0 +1,24 @@
+## MAC OS
+.DS_Store
+
+## TEXTMATE
+*.tmproj
+tmtags
+
+## EMACS
+*~
+\#*
+.\#*
+
+## VIM
+*.swp
+tags
+
+.bundle
+.vagrant
+*.lock
+coverage
+junit
+log
+spec/reports
+spec/fictures

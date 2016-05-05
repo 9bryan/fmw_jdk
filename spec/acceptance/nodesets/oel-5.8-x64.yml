@@ -1,0 +1,14 @@
+HOSTS:
+  oel-58-x64:
+    roles:
+      - agent
+      - default
+    platform: el-5-x86_64
+    box: OEL-5.8
+    hypervisor : vagrant
+
+CONFIG:
+  type: foss
+  vagrant_memsize: 2048
+  log_level: verbose
+

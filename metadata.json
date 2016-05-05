@@ -1,0 +1,14 @@
+{
+  "name": "oracle-fmw_jdk",
+  "version": "0.1.0",
+  "author": "oracle",
+  "summary": "Installs Oracle JDK 7,8 on any Windows, Linux or Solaris host",
+  "license": "MIT",
+  "source": "https://github.com/oracle/puppet-samples/fmw_jdk",
+  "project_page": "https://github.com/oracle/puppet-samples",
+  "issues_url": "https://github.com/oracle/puppet-samples",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
