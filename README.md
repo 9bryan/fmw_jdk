@@ -5,12 +5,21 @@
 1. [Overview - What is the fmw_jdk module?](#overview)
 2. [Module Description - What does the module do?](#module-description)
 3. [Setup - The basics of getting started with fmw_jdk](#setup)
-4. [Usage - The manifests available for configuration](#usage)
+4. [Usage - The manifearis JDK 7 with x64 entensions
+
+    class { 'fmw_jdk::install':
+      java_home_dir   => '/usr/jdk/instances/jdk1.7.0_75',
+      source_file     => '/sosts available for configuration](#usage)
     * [Manifests](#manifests)
         * [Manifest: init](#manifest-init)
+        The fmw_jdk module allows you to install and configure an Oracle JDK on a Windows, Linux or Solaris host. Also it can configure the rng service ( random number generator, urandom) on a linux node, this will fix the lack of Entropy on a linux VM.
         * [Manifest: install](#manifest-install)
         * [Manifest: rng_service](#manifest-rng_service)
-5. [Limitations - OS compatibility, etc.](#limitations)
+5. [Limitations - aris JDK 7 with x64 entensions
+
+    class { 'fmw_jdk::install':
+      java_home_dir   => '/usr/jdk/instances/jdk1.7.0_75',
+      source_file     => '/soOS compatibility, etc.](#limitations)
 6. [Development - Guide for contributing to the module](#development)
     * [Contributing to the fmw_jdk module](#contributing)
     * [Running tests - A quick guide](#running-tests)
@@ -20,8 +29,12 @@
 The fmw_jdk module allows you to install and configure an Oracle JDK on a Windows, Linux or Solaris host. Also it can configure the rng service ( random number generator, urandom) on a linux node, this will fix the lack of Entropy on a linux VM.
 
 ## Module description
+aris JDK 7 with x64 entensions
 
-This modules allows you to install any JDK version 7 or 8 on any Windows, Linux or Solaris host or VM. Besides installing the JDK you will also be able to control which JDK will the default by setting all symbolic links for java, javac, keytool etc. For Linux hosts you are also be able to configure and start the rng service ( random number generator, urandom, Hardware RNG Entropy Gatherer Daemon) which solves the lack of Entropy (urandom)
+    class { 'fmw_jdk::install':
+      java_home_dir   => '/usr/jdk/instances/jdk1.7.0_75',
+      source_file     => '/so
+This modules allows you to install any JDK version 7 or 8 on any Windows, Linux or Solaris host or VM. Besides installing the JDK you will also be able to control which JDK will the default by setting all symbolic links for java, javac, keytool etc. For Linux hosts you are also be able to configure and start the rng service ( random number generator, urandom, Hardware RNG Entropy Gatherer DThe fmw_jdk module allows you to install and configure an Oracle JDK on a Windows, Linux or Solaris host. Also it can configure the rng service ( random number generator, urandom) on a linux node, this will fix the lack of Entropy on a linux VM.aemon) which solves the lack of Entropy (urandom)
 
 ## Setup
 
@@ -39,18 +52,26 @@ This is an empty manifest and does not do anything
 
 This will install the JDK on a host
 
-rpm can only be used on a RedHat family platform
+rpm can only be used on a RedHat The fmw_jdk module allows you to install and configure an Oracle JDK on a Windows, Linux or Solaris host. Also it can configure the rng service ( random number generator, urandom) on a linux node, this will fix the lack of Entropy on a linux VM.family platform
 
     class { 'fmw_jdk::install':
       java_home_dir => '/usr/java/jdk1.8.0_45',
       source_file   => '/software/jdk-8u45-linux-x64.rpm',
     }
 
-All other linux distributions ( RedHat family included) can also use tar.gz source_file
+All other linux distribu6. [Development - Guide for contributing to the module](#development)
+    * [Contributing to the fmw_jdk module](#contributing)
+    * [Running tests - A quick guide](#running-tests)
+    
+    tions ( RedHat family included) can also use tar.gz source_file
 
     class { 'fmw_jdk::install':
       java_home_dir => '/usr/java/jdk1.8.0_40',
-      source_file   => '/software/jdk-8u40-linux-x64.tar.gz',
+      source_file aris JDK 7 with x64 entensions
+
+    class { 'fmw_jdk::install':
+      java_home_dir   => '/usr/jdk/instances/jdk1.7.0_75',
+      source_file     => '/so  => '/software/jdk-8u40-linux-x64.tar.gz',
     }
 
 Windows
@@ -59,7 +80,7 @@ Windows
       java_home_dir => 'c:\\java\\jdk1.7.0_75',
       source_file   => 'c:\\software\\jdk-7u75-windows-x64.exe',
     }
-
+The fmw_jdk module allows you to install and configure an Oracle JDK on a Windows, Linux or Solaris host. Also it can configure the rng service ( random number generator, urandom) on a linux node, this will fix the lack of Entropy on a linux VM.
 Solaris ( tar.gz or tar.Z SVR4 package)
 
     class { 'fmw_jdk::install':
@@ -81,14 +102,22 @@ Solaris JDK 7 with x64 entensions
     }
 
     class { 'fmw_jdk::install':
-      java_home_dir   => '/usr/jdk/instances/jdk1.7.0',
+      java_home_diaris JDK 7 with x64 entensions
+
+    class { 'fmw_jdk::install':
+      java_home_dir   => '/usr/jdk/instances/jdk1.7.0_75',
+      source_file     => '/sor   => '/usr/jdk/instances/jdk1.7.0',
       source_file     => '/software/jdk-7u75-solaris-i586.tar.Z',
       source_x64_file => '/software/jdk-7u75-solaris-x64.tar.Z',
     }
 
 #### Manifest rng_service
 
-This will install and configure the rng package on any RedHat or Debian family linux distributions. For windows or solaris platforms this is not necessary and this manifest will do just a return when this manifest is executed on one of those hosts.
+This will install and configure the rng package on any RedHat or Debian family linux distributions. For windows or solaris platforms this is aris JDK 7 with x64 entensions
+
+    class { 'fmw_jdk::install':
+      java_home_dir   => '/usr/jdk/instances/jdk1.7.0_75',
+      source_file     => '/sonot necessary and this manifest will do just a return when this manifest is executed on one of those hosts.
 
     include fmw_jdk::rng_service
 
